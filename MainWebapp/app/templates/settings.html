@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" http-equiv="refresh" content="300">
+        <title>Settings</title>
+        <link rel="stylesheet", type="text/css", href="/static/css/style.css">
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        <form action="/updateThreshold" method="post">
+            <h3>Settings</h3>
+            <div class="inline">
+                <label>Threshold</label>
+                <input class="thresholdInput" type="number" name="threshold" max="50" min="0" value="{{ curThreshold }}">
+            </div>
+            <br>
+            <input type="submit" value="Submit" class="submit">
+        </form>     
+    </body>
+</html>

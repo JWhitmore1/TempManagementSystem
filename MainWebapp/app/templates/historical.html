@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" http-equiv="refresh" content="300">
+        <title>Historical Data</title>
+        <link rel="stylesheet", type="text/css", href="/static/css/style.css">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ['Time', 'Temperature'],
+            {% for (time, temp) in all_temps %}
+            ["{{time}}",  {{temp}}],
+            {% endfor %}
+            ]);
+
+            var options = {
+            title: 'Historical Temperatures for 3 days',
+            <!-- curveType: 'function', -->
+            legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+        </script>
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        <div id="curve_chart" style="width: 1400px; height: 500px; position:absolute; top:100px; z-index: -1;"></div>
+    </body>
+</html>

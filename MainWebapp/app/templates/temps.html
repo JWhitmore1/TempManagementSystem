@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" http-equiv="refresh" content="30">
+        <title>Temperature Regulation</title>
+        <link rel="stylesheet", type="text/css", href="/static/css/style.css">
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        {% if warning == True -%}
+            <div class="blur">
+                <div class="warning">
+                    <h2>WARNING:</h2>
+                    <p>Internal Temperature is above safety threshold</p>
+                    <p class="warnVals">Temp: {{ weather_data[0] }}° &nbsp&nbsp Threshold: {{ threshold }}°</p>
+                </div>
+            </div>
+         {% endif %}
+        <div class="bodyContent">
+            <div class="flex-child">
+                <p class="title">Internal Temperature</p>
+                <div class="center">
+                    <p class="temp">{{weather_data[0]}}°</p>
+                    <p class="info">True: {{weather_data[1]}}.0° Humidity: {{weather_data[2]}}%</p>
+                </div>
+            </div>
+            <div class="flex-child">
+                <p class="title">External Temperature</p>
+                <div class="center">
+                    <p class="temp">{{weather_data[3]}}°</p>
+                    <p class="info">True: {{weather_data[4]}}° Humidity: {{weather_data[5]}}%</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
