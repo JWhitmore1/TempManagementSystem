@@ -1,8 +1,8 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__name__))
 
-username = 'jwhit1074'
-password = 'Jacjacjac_3210'
+username = ''
+password = ''
 
 
 class Config(object):
