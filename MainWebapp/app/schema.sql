@@ -16,7 +16,5 @@ CREATE TABLE InternalWeather (
 
 CREATE TABLE Thresholds (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    thresholdMax FLOAT,
-    thresholdMin FLOAT
+    threshold FLOAT,
 )
-
