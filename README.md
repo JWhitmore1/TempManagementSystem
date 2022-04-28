@@ -20,33 +20,6 @@ The IoT system must have a web interface that allows managers to:
 
   • comply with accessibility guidelines (see below)
 
-  • include the G.James logo (see below) <br>
-  
-
-
-### potential users of the system and their needs.
-
-Jane
-
-  • Manager at G.James
-  
-  • Is concerned about employee well-being and legal implications for not following safety procedures
-  
-  • Would like to receive alerts when the safe temperature threshold is reached
-
-Michelle
-  
-  • Supervisor at G.James manufacturing facility
-  
-  • Is responsible for occupational health and safety compliance
-  
-  • Would like to be able to change the safe temperature threshold depending on what work needs to be done
-
-Bianca
-  
-  • Is an aluminium window worker
-  
-  • Wants to minimise her exposure to heat stress
-  
+  • include the G.James logo 
   • Would like to be able to view the current temperature on a large screen in the factory
   
