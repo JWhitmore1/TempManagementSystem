@@ -24,7 +24,7 @@ The IoT system must have a web interface that allows managers to:
   
 
 
-### Proto-personas have been developed for potential users of the system.
+### potential users of the system and their needs.
 
 Jane
 
