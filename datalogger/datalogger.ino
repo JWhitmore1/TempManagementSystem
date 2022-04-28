@@ -100,9 +100,11 @@ void setup()
 void loop()
 {
   int chk = DHT.read11(DHT11_PIN);
+  // append values from sensors to JSON objects
   doc["data_date_time"] = getDateTime();
   doc["true_t"] = DHT.temperature;
   doc["humidity"] = DHT.humidity;
+  // create the JSON string and send it to the serial monitor for pickup at the raspberry pi
   serializeJson(doc, Serial);
   Serial.println(" ");
 
