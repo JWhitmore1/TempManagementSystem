@@ -181,3 +181,16 @@ form label {
   font-size: 18px;
   font-weight: 400;
 }
+
+.green {
+  color: green;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+

@@ -2,11 +2,13 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" http-equiv="refresh" content="30">
-        <title>Temperature Regulation</title>
+        <title>Temperature Dashboard</title>
         <link rel="stylesheet", type="text/css", href="/static/css/style.css">
     </head>
     <body>
+        <!-- imports the nav bar -->
         {% include 'nav.html' %}
+        <!-- if warning is true, display warning popup -->
         {% if warning == True -%}
             <div class="blur">
                 <div class="warning">
@@ -19,14 +21,15 @@
         <div class="bodyContent">
             <div class="flex-child">
                 <p class="title">Internal Temperature</p>
-                <div class="center">
+                <!-- sets the colour class based on distance from the threshold -->
+                <div class="center {{ 'red' if weather_data[0] >= threshold else 'orange' if weather_data[0] >= threshold-3 else 'green' }}">
                     <p class="temp">{{weather_data[0]}}°</p>
                     <p class="info">True: {{weather_data[1]}}.0° Humidity: {{weather_data[2]}}%</p>
                 </div>
             </div>
             <div class="flex-child">
                 <p class="title">External Temperature</p>
-                <div class="center">
+                <div class="center {{ 'red' if weather_data[0] >= threshold else 'orange' if weather_data[0] >= threshold-3 else 'green' }}">
                     <p class="temp">{{weather_data[3]}}°</p>
                     <p class="info">True: {{weather_data[4]}}° Humidity: {{weather_data[5]}}%</p>
                 </div>
