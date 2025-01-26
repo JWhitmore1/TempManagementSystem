@@ -1,5 +1,5 @@
 # TempManagementSystem
-School assessment to create a temperature management system webapp, pulling data from a datalogger and an API, with a customisable threshold, and database
+Temperature management system webapp, pulling data from a datalogger and an API, with a customisable threshold, and database
 
 ### Stimulus:
 
